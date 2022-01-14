@@ -3540,13 +3540,23 @@ input::-webkit-input-placeholder {
     padding-top: 44px;
     padding-bottom: 45px;
 }
-.header-style5 .header-menu .main-nav .menu li.nav-sing a.sing-in{
+.header-style5 .header-menu .main-nav .menu li.nav-sing a.sing-in {
     padding: 11px 32px 11px 33px;
     border-radius: 36px;
     background: #fbb545;
     margin-right: 0;
     display: unset;
 }
+.clear-padding{
+    padding: 2%;
+}
+
+.apply-btn{
+    padding: 11px 32px 11px 33px;
+    border-radius: 36px;
+    background: #fbb545;
+}
+
 .header-style5 .nav-sing {
     margin-left: 54px;
 }
