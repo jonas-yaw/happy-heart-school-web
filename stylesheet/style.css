@@ -1409,6 +1409,23 @@ input::-webkit-input-placeholder {
     background-repeat: no-repeat;
 	
 }
+
+.special-event-header{
+    background-image: url('../image/excursion-2.jpg');
+    background-position: center;
+    background-size: cover;
+    width: 100% !important;
+    height: 500px;
+    margin-bottom: 4%;
+}
+
+.logo-head{
+    font-weight: bold;
+    color: black;
+    font-size: 30px;
+}
+
+
 .header-blog .header-menu{
     float: right;
 }
@@ -1442,6 +1459,23 @@ input::-webkit-input-placeholder {
 .post-border{
     border: 1px solid #f1f1f1;
 }
+
+.gallery-content{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.gallery-content div{
+    margin-bottom: 4%;
+}
+
+.gallery-content div img{
+    width: 250px;
+    
+}
+
 .site-content .post-blog .content-post{
     padding: 30px 20px 43px 30px;
 }
@@ -2109,6 +2143,26 @@ input::-webkit-input-placeholder {
     float: left;
     padding-left: 100px;
 }
+
+.special-event-img-div{
+    display: flex ;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 4%;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.special-event-img-div div{
+    margin-bottom: 4%;
+}
+
+special-event-img-div div{
+    width: 350px;
+    height: 150px;
+}
+
 .flat-introduce-style1 .videobox a.fancybox:before{
     bottom: 0;
     right: 0;
@@ -4514,6 +4568,12 @@ input::-webkit-input-placeholder {
     padding: 41px 0 85px 0;
     margin-bottom: 119px;  
 }
+
+.question-sg h4{
+    font-weight: bold !important;
+    margin-top: 2%;
+}
+
 .courses-single-page .content-page-wrap .item-content .question-sg {
     margin-bottom: 47px;
 }
