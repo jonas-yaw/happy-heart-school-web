@@ -74,6 +74,8 @@
             }
         });
     };
+
+    
     
     var headerFixed = function() {
         var top_height = $('.top-bar').height(),
