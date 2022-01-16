@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="stylesheet/owl.carousel.min.css">
     <link rel="stylesheet" href="stylesheet/jquery.mCustomScrollbar.min.css">
     
-    <link href="icon/favicon.ico" rel="shortcut icon">
+    <link href="image/hhs-logo-resized.png" rel="shortcut icon">
 </head>
 <body>
     <div id="loading-overlay">
