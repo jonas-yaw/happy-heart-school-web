@@ -1299,6 +1299,8 @@ input::-webkit-input-placeholder {
 /*menu*/
 #logo {
     display: inline-block;
+    margin-top: 2.5% !important;
+    padding: 0 !important;
 }
 
 #logo div,.logo-footer div{
@@ -1308,6 +1310,14 @@ input::-webkit-input-placeholder {
     background-position: center;
     width: 120px;
     height: 120px;
+}
+
+#logo h4{
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
 }
 
 .breadcrumbs-wrap{
@@ -1509,6 +1519,54 @@ input::-webkit-input-placeholder {
 .gallery-content div img{
     width: 300px;
     height: 250px;
+}
+
+.contact-page{
+    margin: 0 0 5% 0;
+}
+
+.contact-page .col-benefit-right{
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+.contact-page .widget-sent{
+    max-width: 70%;
+    margin: 0 auto;
+
+}
+
+.contact-page .widget-sent input{
+    margin: 0 0 5% 0;
+}
+
+.contact-page .widget-sent input{
+    margin-top: 15%;
+}
+
+.contact-page .widget-sent textarea{
+    border-radius: 5px;
+    margin-top: 10%;
+}
+
+.map-div {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    margin: 5% 0 5% 0;
+}
+
+.widget-sent .form-sent button{
+    margin: 4% 0 0 0;
+    background-color: blue;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.btn-div{
+    text-align: right;
 }
 
 .site-content .post-blog .content-post{
@@ -5201,7 +5259,7 @@ special-event-img-div div{
     margin: 12px 0 17px 0;
 }
 .header-sticky .site-header-inner #logo{
-    margin: 25px 0;
+    margin-top: 1.5% !important;
 }
 .header-sticky .site-header-inner #main-nav > ul > li{
     padding-top: 28px;
