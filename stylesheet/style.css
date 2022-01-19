@@ -1558,6 +1558,11 @@ input::-webkit-input-placeholder {
     margin: 5% 0 5% 0;
 }
 
+.gallery-image-div img{
+    width: 200px;
+    height: 200px;
+}
+
 .widget-sent .form-sent button{
     margin: 4% 0 0 0;
     background-color: blue;
