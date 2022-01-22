@@ -19,17 +19,6 @@ function validateForm() {
         alert("Phone Number must be filled out");
         return false;
     }
-
-    if (enq_email == "") {
-        alert("Email must be filled out");
-        return false;
-    }
-
-    if (enquiry == "") {
-        alert("Enquiry must be filled out");
-        return false;
-    }
-
 }
 
 function validateEnquiryForm() {

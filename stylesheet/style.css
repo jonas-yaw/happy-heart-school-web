@@ -1503,6 +1503,56 @@ input::-webkit-input-placeholder {
     height: 200px;
 }
 
+.margbtm{
+    margin-bottom: 5%;
+}
+
+.upcoming-events-div{
+    margin: 0% 0 5% 0;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0% 0 8% 0;
+}
+
+.event-div-inner{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.event-div-title{
+    font-size: 35px;
+    font-weight: bold;
+    color: orange;
+    margin: 1% 0 3% 1%;
+}
+
+.event-description{
+    border-left: 8px solid black;
+
+}
+
+.event-description p{
+    padding: 5%;
+}
+
+.parents-forum-btn{
+    margin: 4% 0 4% 0;
+    text-align: center;
+}
+
+.parents-forum-btn button{
+    font-weight: bold !important;
+    transition: 0.75s ease-in-out;
+    border: 1px solid transparent;
+}
+
+.parents-forum-btn button:hover{
+    color: black;
+    background-color: transparent;
+    border: 1px solid black;
+}
+
 
 
 .gallery-content{
@@ -1519,6 +1569,18 @@ input::-webkit-input-placeholder {
 .gallery-content div img{
     width: 300px;
     height: 250px;
+}
+
+.gallery-h3{
+    font-size: 30px;
+    margin: 0 0 5% 5%;
+    padding: 0 0 2% 0;
+    border-bottom: 5px solid red;
+    width: 20%;
+}
+
+.gallery-h3:nth-child(1){
+    margin-top:3%;
 }
 
 .contact-page{
