@@ -3700,6 +3700,23 @@ special-event-img-div div{
     margin-left: 10px;
 }
 
+.class-dropdown{
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+
+.container-db-return{
+    max-height: 80%;
+    text-align: center;
+}
+
+.container-db-return p{
+    padding: 10%;
+    font-size: 40px;
+    line-height: 100%;
+}
+
 /*home5*/
 .header-style5 .site-header-inner #logo{
     margin: 41px 0 31px 0;
@@ -3989,6 +4006,20 @@ special-event-img-div div{
 .flat-introduce-style5 .content-introduce .content-introduce-inner p{
     margin-bottom: 11px;
 }
+
+.parents-forum-text{
+    background-image: url('../images/home5/02.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.parents-forum-text p{
+    padding: 0 20% 0 20%;
+    font-size: 40px;
+    word-spacing: 2%;
+    line-height: 90%;
+}
+
 
 .testimonial-style5{
     background-image: url('../images/home5/02.jpg');

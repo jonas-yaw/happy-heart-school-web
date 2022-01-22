@@ -1,3 +1,27 @@
+<!-- <?php
+
+$Name = $_POST['Name'];
+$Email = $_POST['Email'];
+$Phone = $_POST['Phone'];
+$studentClass = $_POST['studentClass'];
+
+include_once 'includes/db.php';
+
+$sql = "INSERT INTO admissionsTable (aName,Email,Phone,studentClass)
+        VALUES (?,?,?,?);";
+
+$stmt = mysqli_stmt_init($conn);
+if (!mysqli_stmt_prepare($stmt,$sql)) {
+    echo "SQL statement prep failed";
+} else {
+    mysqli_stmt_bind_param($stmt, "ssss",$Name,$Email,$Phone,$studentClass);
+    mysqli_stmt_execute($stmt);
+}
+
+
+?>
+ -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,108 +77,13 @@
                     </div>
                 </div>
             </header>
-            <div class="page-title page-title-blog">
-                <div class="page-title-inner">
-                    <div class="breadcrumbs breadcrumbs-blog text-left">
-                        <div class="container">
-                            <div class="breadcrumbs-wrap">
-                                <ul class="breadcrumbs-inner">
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="course.html">Contact</a></li>
-                                </ul>
-                                <div class="title">
-                                    Contact
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div><!-- bg-header -->
-
-    <!-- contact -->
-    <div class="contact-page row">
-        <div class="col-lg-6 admissions-div">
-            <div class="col-benefit-right" id="apply-for-admission">
-                <div class="apply-admission bg-apply-type1">
-                    <div class="apply-admission-wrap type5 bd-type2">
-                        <div class="apply-admission-inner">
-                            <h2 class="title text-center">
-                                <span>Apply for admission</span>
-                            </h2>
-                        </div>
-                    </div>
-                    <div class="form-apply">
-                        <div class="section-overlay333"></div>
-                        <!-- contactdb.php -->
-                        <form 
-                            action="" 
-                            method='POST' 
-                            class="apply-now" 
-                            name = 'admission-form'
-                            onsubmit="return validateForm()">
-                            <ul>
-                                <li><input type="text" name="Name" placeholder="Name"></li>
-                                <li><input type="email" name="Email" placeholder="Email"></li>
-                                <li><input type="text" name="Phone" placeholder="Phone"></li>
-                                <li>
-                                    <label for="class" class="class-dropdown">Class: </label>
-                                    <select name="studentclass" id="studentclass">
-                                        <option value="class 1">CRÈCHE</option>
-                                        <option value="class 2">NURSERY</option>
-                                        <option value="class 3">KINDERGARTEN</option>
-                                        <option value="JHS 1">PRIMARY</option>
-                                        <option value="JHS 2">AFTER-SCHOOL CARE</option>
-                                    </select>
-                                </li>
-                            </ul>
-                            <div class="btn-50 hv-border text-center">
-                                <button type="submit" class="btn bg-clf0c41b">
-                                    Apply now
-                                </button>
-                            </div>
-                        </form>  
-                    </div>
-                </div>
-            </div>
+    <div class="course-grid">
+        <div class="container-db-return">
+            <p>Thank you for applying for admission. We will contact you soon.</p>
         </div>
-
-        <div class="col-lg-6 enquiries">
-            <div class="widget widget-sent">
-                <div class="apply-admission">
-                    <div class="apply-admission-wrap type1 bd-type1">
-                        <div class="apply-admission-inner">
-                            <h2 class="title text-center">
-                                <span>Make enquiries</span>
-                            </h2>
-                            <div class="apply-sent apply-sent-style1">
-                                <form action="enquiry.php"
-                                    method="post" 
-                                    class="form-sent"
-                                    name="enquiry-form"
-                                    onsubmit="return validateEnquiryForm()">
-                                    <input type="email" name="enq-Email" placeholder="Enter your email ....">
-                                    <textarea name="enquiry" id="enquiry" cols="30" rows="10" placeholder="Enter your enquiry ...."></textarea>
-                                    <div class="btn-div">
-                                        <button type="submit">Submit</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-    <div class="map-div">
-        <p>Locate Us.</p>
-        <div>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3971.0921277374564!2d-0.21044128590843197!3d5.553359935221874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf90a2fbaee223%3A0x37b53efcaef6544c!2sAccra%20Central!5e0!3m2!1sen!2sgh!4v1642432858381!5m2!1sen!2sgh" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </div>
-    </div>
+    </div><!-- course-grid -->
 
     <footer id="footer" class="footer-type1">
         <div id="footer-widget">
@@ -235,7 +164,6 @@
     <script src="javascript/jquery-isotope.js"></script>
     <script src="javascript/equalize.min.js"></script>
     <script src="javascript/main.js"></script>
-    <script src="javascript/add-in.js"></script>
 
 
     <!-- slider -->
