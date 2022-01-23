@@ -20,7 +20,7 @@ if (!mysqli_stmt_prepare($stmt,$sql)) {
     mysqli_stmt_execute($stmt);
     
 ini_set( 'display_errors', 1 );
-   error_reporting( E_ALL );
+   error_reporting(E_ALL);
    $mail = new PHPMailer;
    $mail->isSMTP();
    $mail->SMTPDebug = 2;
@@ -34,12 +34,12 @@ ini_set( 'display_errors', 1 );
    $mail->addAddress('richard.oduro45@gmail.com', 'Richard');
    $mail->Subject = 'Happy Heart School Admission Form';
   // $mail->msgHTML(file_get_contents('message.html'), __DIR__);
-   $mail->Body = 'Hi $Name, Kindly find attached as requested.';
-   if($$studentClass=="CRECHE")
+   $mail->Body = "Hi $Name, Kindly find attached as requested.";
+   if($studentClass=="CRECHE")
    {
  $mail->addAttachment('includes/preschool.pdf');
    }
-    else if($$studentClass=="NURSERY")
+    else if($studentClass=="NURSERY")
     { $mail->addAttachment('includes/Creche.pdf');}
    if (!$mail->send()) {
       // echo 'Mailer Error: ' . $mail->ErrorInfo;
