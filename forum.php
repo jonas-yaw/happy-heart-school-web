@@ -28,7 +28,7 @@
     <div id="loading-overlay">
         <div class="loader"></div>
     </div>
-    <div class="bg-header">
+    <div class="bg-header4">
        
    <div class="wrap-header">
         <header class="header flat-header lh-header header-style5 clearfix">
@@ -72,8 +72,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div><!-- bg-header -->
+        </div><br><br><br><br>
+    <!-- bg-header -->
     <div class="blog-bl content-blog">
         <div class="container">
             <div class="row">

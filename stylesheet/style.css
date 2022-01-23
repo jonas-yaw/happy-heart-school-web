@@ -1446,6 +1446,20 @@ input::-webkit-input-placeholder {
     background-repeat: no-repeat;
 	
 }
+.bg-header3{
+    background-image: url('../image/apply.jpg');
+    height: 400px;
+    background-repeat: no-repeat;
+	
+}
+.bg-header4{
+    background-image: url('../image/forum.jfif');
+    height: 400px;
+    background-repeat: no-repeat;
+	background-position: center;
+    background-size: cover;
+    width: 100% !important;
+}
 
 .special-event-header{
     background-image: url('../image/kid.jpg');
