@@ -1,7 +1,9 @@
 <?php
  require 'vendor/autoload.php';
   use PHPMailer\PHPMailer\PHPMailer;
-  
+   require_once("hubtel/Demo.php");
+   
+   
 $Name = $_POST['Name'];
 $Email = $_POST['Email'];
 $Phone = $_POST['Phone'];
@@ -46,6 +48,22 @@ ini_set( 'display_errors', 1 );
    } else {
    //    echo 'The email message was sent.';
    }
+
+try {
+				$messageResponse = $messagingApi->sendQuickMessage("HHS", "0541778545", "Happy Heart Admission Form has been sent to your email");
+
+				if ($messageResponse instanceof MessageResponse) {
+					
+					echo $messageResponse->getStatus();
+					
+				} elseif ($messageResponse instanceof HttpResponse) {
+					
+					echo "\nServer Response Status : " . $messageResponse->getStatus();
+					
+				}
+			} catch (Exception $ex) {
+		echo $ex->getTraceAsString();
+			}
 
 
 }
