@@ -545,11 +545,25 @@
                     </div>
                     <div class="form-apply">
                         <div class="section-overlay333"></div>
-                        <form action="#" class="apply-now">
+                        <form  action="contactdb.php" 
+                            method='POST' 
+                            class="apply-now" 
+                            name = 'admission-form'
+                            onsubmit="return validateForm()">
                             <ul>
-                                <li><input type="search" placeholder="Name"></li>
-                                <li><input type="search" placeholder="Email"></li>
-                                <li><input type="search" placeholder="Phone"></li>
+                                  <li><input type="text" name="Name" placeholder="Name"></li>
+                                <li><input type="email" name="Email" placeholder="Email"></li>
+                                <li><input type="text" name="Phone" placeholder="Phone"></li>
+                                <li>
+                                    <label for="class" class="class-dropdown">Class: </label>
+                                    <select name="studentClass" id="studentclass">
+                                        <option value="CRECHE">CRECHE</option>
+                                        <option value="NURSERY">NURSERY</option>
+                                        <option value="KINDERGARTEN">KINDERGARTEN</option>
+                                        <option value="PRIMARY">PRIMARY</option>
+                                        <option value="AFTER-SCHOOL CARE">AFTER-SCHOOL CARE</option>
+                                    </select>
+                                </li>
                             </ul>
                             <div class="btn-50 hv-border text-center">
                                 <button class="btn bg-clf0c41b">
