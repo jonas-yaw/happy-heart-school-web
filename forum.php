@@ -22,143 +22,143 @@
     <link rel="stylesheet" href="stylesheet/owl.carousel.min.css">
     <link rel="stylesheet" href="stylesheet/jquery.mCustomScrollbar.min.css">
 
-    <link href="image/hhs-logo-resized.png" rel="shortcut icon">
+    <link href="icon/favicon.ico" rel="shortcut icon">
 </head>
 <body>
     <div id="loading-overlay">
         <div class="loader"></div>
     </div>
-    <div class="bg-header3">
-        <div class="flat-header-blog">
-            <header class="header flat-header lh-header header-style5 clearfix">
-                <div class="site-header-inner">
-                    <div class="container">
+    <div class="bg-header4">
+       
+   <div class="wrap-header">
+        <header class="header flat-header lh-header header-style5 clearfix">
+            <div class="site-header-inner">
+                <div class="container">
                         <div id="logo" class="logo">
                             <h4>HAPPY HEART</h4>
-                        </div>                        <div class="mobile-button"><span></span></div>
-                        <div class="header-menu">
-                            <nav id="main-nav" class="main-nav">
-                                <ul class="menu">
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="classes.html">Our classes</a></li>
-                                    <li><a href="special-event.html">Special Event</a></li>
-                                    <li><a href="gallery.html">Gallery</a></li>
-                                    <li><a href="about.html">About</a></li>
-                                    <li class="nav-sing">
+                        </div>                    <div class="mobile-button"><span></span></div>
+                    <div class="header-menu">
+                        <nav id="main-nav" class="main-nav">
+                            <ul class="menu">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="classes.html">Our classes</a></li>
+                                <li><a href="special-event.html">Special Event</a></li>
+                                <li><a href="gallery.html">Gallery</a></li>
+                                <li><a href="about.html">About</a></li>
+                                <li class="nav-sing">
                                     <a class="sing-in" href="contact.html">Apply</a>
                                 </li>
-                                </ul>
-                            </nav>
-                        </div> 
-                    </div>
+                            </ul>
+                        </nav>
+                    </div> 
                 </div>
-            </header>
+            </div>
+        </header><!-- header -->
+    </div><!-- wrap-header -->
             <div class="page-title page-title-blog">
                 <div class="page-title-inner">
                     <div class="breadcrumbs breadcrumbs-blog text-left">
-                        <div class="container">
+                        <div class="container">  
                             <div class="breadcrumbs-wrap">
                                 <ul class="breadcrumbs-inner">
                                     <li><a href="index.html">Home</a></li>
-                                    <li><a href="course.html">Contact</a></li>
+                                    <li><a href="forum.html">Forum</a></li>
                                 </ul>
                                 <div class="title">
-                                    Contact
+                                    Forum
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div><!-- bg-header -->
-<br><br><br><br>
-    <!-- contact -->
-    <div class="contact-page row">
-        <div class="col-lg-6 admissions-div">
-            <div class="col-benefit-right" id="apply-for-admission">
-                <div class="apply-admission bg-apply-type1">
-                    <div class="apply-admission-wrap type5 bd-type2">
-                        <div class="apply-admission-inner">
-                            <h2 class="title text-center">
-                                <span>Apply for admission</span>
-                            </h2>
-                        </div>
-                    </div>
-                    <div class="form-apply">
-                        <div class="section-overlay333"></div>
-                        <form 
-                            action="contactdb.php" 
-                            method='POST' 
-                            class="apply-now" 
-                            name = 'admission-form'
-                            onsubmit="return validateForm()">
-                            <ul>
-                                <li><input type="text" name="Name" placeholder="Name"></li>
-                                <li><input type="email" name="Email" placeholder="Email"></li>
-                                <li><input type="text" name="Phone" placeholder="Phone"></li>
-                                <li>
-                                    <label for="class" class="class-dropdown">Class: </label>
-                                    <select name="studentClass" id="studentclass">
-                                        <option value="CRECHE">CRECHE</option>
-                                        <option value="NURSERY">NURSERY</option>
-                                        <option value="KINDERGARTEN">KINDERGARTEN</option>
-                                        <option value="PRIMARY">PRIMARY</option>
-                                        <option value="AFTER-SCHOOL CARE">AFTER-SCHOOL CARE</option>
-                                    </select>
-                                </li>
-                            </ul>
-                            <div class="btn-50 hv-border text-center">
-                                <button type="submit" class="btn bg-clf0c41b">
-                                    Apply now
-                                </button>
-                            </div>
-                        </form>  
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-lg-6 enquiries">
-            <div class="widget widget-sent">
-                <div class="apply-admission">
-                    <div class="apply-admission-wrap type1 bd-type1">
-                        <div class="apply-admission-inner">
-                            <h2 class="title text-center">
-                                <span>Make enquiries</span>
-                            </h2>
-                            <div class="apply-sent apply-sent-style1">
-                                <form action="enquiry.php"
-                                    method="post" 
-                                    class="form-sent"
-                                    name="enquiry-form"
-                                    onsubmit="return validateEnquiryForm()">
-                                    <input type="email" name="enq-Email" placeholder="Enter your email ....">
-                                    <textarea name="enquiry" id="enquiry" cols="30" rows="10" placeholder="Enter your enquiry ...."></textarea>
-                                    <div class="btn-div">
-                                        <button type="submit">Submit</button>
+        </div><br><br><br><br>
+    <!-- bg-header -->
+    <div class="blog-bl content-blog">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+              <div class="site-content clearfix">
+                        <article class="post post-blog-single">
+                       
+                            <div class="content-blog-single">
+                                <ul class="social social-blog-single pd-top8">
+                                    <li><i class="fa fa-facebook" aria-hidden="true"></i></li>
+                                    <li><i class="fa fa-twitter" aria-hidden="true"></i></li>
+                                    <li><i class="fa fa-instagram" aria-hidden="true"></i></li>
+                                    <li><i class="fa fa-google-plus" aria-hidden="true"></i></li>
+                                </ul>
+                                <div class="content-blog-single-inner">
+                                    <div class="content-blog-single-wrap">
+                                        <h1 class="title pd-title-single">
+                                            <a href="#">How can my kid do better?</a>
+                                        </h1>
+                                        <p>
+                                            If it was not for beautiful designs, we’d all live in a drab world. Steve Jobs would have been anonymous, and nobody would buy Apple products. The best designers, people like Janoff, who designed the Apple logo in 2 weeks.
+                                        </p>
+                                       
                                     </div>
-                                </form>
+								
+                                    <div id="respond" class="comment-respond">
+                                        <h3 id="reply-title" class="comment-reply-title mg-bottom24">
+                                            Post A Comment
+                                        </h3>
+                                        <form action="#" method="post" class="comments">
+                                            <div class="message-wrap">
+                                                <textarea name="comment" id="comment-message" rows="3" placeholder="Type here Message"></textarea>
+                                            </div>
+                                            <div class="mg-top30">
+                                                <button class="btn btn-post-comment box-shadow-type1">
+                                                    Post Comment
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="sidebar">
+                        <div class="widget widget-categories">
+                            <h4 class="widget-title">
+                                <span>Topics</span>
+                            </h4>
+                            <ul class="categories-wrap">
+                                <li><a href="#">General</a></li>
+                                <li><a href="#">Academic</a></li>
+                                <li><a href="#">Suggestions</a></li>
+                               
+                            </ul>
+                        </div>
+                       <h4 class="widget-title">
+                                <span>Forum</span>
+                            </h4>
+                            <div class="news-block">
+                                <div class="w-content news-block-content news-block-content-cus">
+                                    <ul>
+                              <li><p>Hello This is the first message</p></li>
+							<li><p>Hello This is the first message</p></li>
+							<li><p>Hello This is the first message</p></li>
+							<li><p>Hello This is the first message</p></li>
+									<li><p>Hello This is the first message</p></li><li><p>Hello This is the first message</p></li><li><p>Hello This is the first message</p></li><li><p>Hello This is the first message</p></li><li><p>Hello This is the first message</p></li><li><p>Hello This is the first message</p></li><li><p>Hello This is the first message</p></li><li><p>Hello This is the first message</p></li><li><p>Hello This is the first message</p></li><li><p>Hello This is the first message</p></li><li><p>Hello This is the first message</p></li><li><p>Hello This is the first message</p></li><li><p>Hello This is the first message</p></li>	
+                                        <li><p>Hello This is the first message</p></li><li><p>Hello This is the first message</p></li><li><p>Hello This is the first message</p></li><li><p>Hello This is the first message</p></li>	
+                                    </ul>
+                                </div>
+								
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-    </div>
-
-    <div class="map-div">
-        <p>Locate Us.</p>
-        <div>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3971.0921277374564!2d-0.21044128590843197!3d5.553359935221874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf90a2fbaee223%3A0x37b53efcaef6544c!2sAccra%20Central!5e0!3m2!1sen!2sgh!4v1642432858381!5m2!1sen!2sgh" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </div>
-    </div>
-
+    </div><!-- content-blog -->
+ <br><br><br>
     <footer id="footer" class="footer-type1">
         <div id="footer-widget">
             <div class="container">
-                <div class="row  footer-row">
+                <div class="row footer-row">
                     <div class="col-lg-3 col-footer">
                        <div class="logo-footer">
                            <div></div>
@@ -169,8 +169,8 @@
                             School
                         </h3>
                         <ul class="widget-nav-menu">
-                            <li><a href="#">About School</a></li>
-                            <li><a href="#">Classes</a></li>
+                            <li><a href="about.html">About School</a></li>
+                            <li><a href="classes.html">Classes</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-2 col-link">
@@ -179,8 +179,8 @@
                         </h3>
                         <ul class="widget-nav-menu">
                             <li><a href="#">Apply</a></li>
-                            <li><a href="#">Gallery</a></li>
-                            <li><a href="#">Events</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li><a href="special-event.html">Events</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-2 col-media">
@@ -219,7 +219,7 @@
         </div>
         <a id="scroll-top" class="show"></a>
     </footer><!-- footer -->
-
+    
     <script src="javascript/jquery.min.js"></script>
     <script src="javascript/rev-slider.js"></script>
     <script src="javascript/plugins.js"></script>
@@ -234,8 +234,6 @@
     <script src="javascript/jquery-isotope.js"></script>
     <script src="javascript/equalize.min.js"></script>
     <script src="javascript/main.js"></script>
-    <script src="javascript/add-in.js"></script>
-
 
     <!-- slider -->
     <script src="rev-slider/js/jquery.themepunch.tools.min.js"></script>

@@ -1,5 +1,9 @@
-<!-- <?php
-
+<?php
+ require 'vendor/autoload.php';
+  use PHPMailer\PHPMailer\PHPMailer;
+   require_once("hubtel/Demo.php");
+   
+   
 $Name = $_POST['Name'];
 $Email = $_POST['Email'];
 $Phone = $_POST['Phone'];
@@ -16,11 +20,57 @@ if (!mysqli_stmt_prepare($stmt,$sql)) {
 } else {
     mysqli_stmt_bind_param($stmt, "ssss",$Name,$Email,$Phone,$studentClass);
     mysqli_stmt_execute($stmt);
+    
+ini_set( 'display_errors', 1 );
+   error_reporting(E_ALL);
+   $mail = new PHPMailer;
+   $mail->isSMTP();
+   $mail->SMTPDebug = 2;
+   $mail->Host = 'smtp.hostinger.com';
+   $mail->Port = 587;
+   $mail->SMTPAuth = true;
+   $mail->Username = 'info@richardoduro.com';
+   $mail->Password = 'Mother@2016';
+   $mail->setFrom('info@richardoduro.com', 'Richard Oduro');
+   $mail->addReplyTo('info@richardoduro.com', 'Richard Oduro');
+   $mail->addAddress('richard.oduro45@gmail.com', 'Richard');
+   $mail->Subject = 'Happy Heart School Admission Form';
+  // $mail->msgHTML(file_get_contents('message.html'), __DIR__);
+   $mail->Body = "Hi $Name, Kindly find attached as requested.";
+   if($studentClass=="CRECHE")
+   {
+ $mail->addAttachment('includes/preschool.pdf');
+   }
+    else if($studentClass=="NURSERY")
+    { $mail->addAttachment('includes/Creche.pdf');}
+   if (!$mail->send()) {
+      // echo 'Mailer Error: ' . $mail->ErrorInfo;
+   } else {
+   //    echo 'The email message was sent.';
+   }
+
+try {
+				$messageResponse = $messagingApi->sendQuickMessage("HHS", "0541778545", "Happy Heart Admission Form has been sent to your email");
+
+				if ($messageResponse instanceof MessageResponse) {
+					
+					echo $messageResponse->getStatus();
+					
+				} elseif ($messageResponse instanceof HttpResponse) {
+					
+					echo "\nServer Response Status : " . $messageResponse->getStatus();
+					
+				}
+			} catch (Exception $ex) {
+		echo $ex->getTraceAsString();
+			}
+
+
 }
 
 
 ?>
- -->
+
 
 <!DOCTYPE html>
 <html lang="en">

@@ -450,8 +450,6 @@
                 <div class="clear-padding"></div>
             </div>
         </div>
-
-        
     </section><!-- online-courses -->
     <section class="flat-benefit flat-benefit-style5 clearfix margbtm">
         <div class="container-fluid">
@@ -547,11 +545,25 @@
                     </div>
                     <div class="form-apply">
                         <div class="section-overlay333"></div>
-                        <form action="#" class="apply-now">
+                        <form  action="contactdb.php" 
+                            method='POST' 
+                            class="apply-now" 
+                            name = 'admission-form'
+                            onsubmit="return validateForm()">
                             <ul>
-                                <li><input type="search" placeholder="Name"></li>
-                                <li><input type="search" placeholder="Email"></li>
-                                <li><input type="search" placeholder="Phone"></li>
+                                  <li><input type="text" name="Name" placeholder="Name"></li>
+                                <li><input type="email" name="Email" placeholder="Email"></li>
+                                <li><input type="text" name="Phone" placeholder="Phone"></li>
+                                <li>
+                                    <label for="class" class="class-dropdown">Class: </label>
+                                    <select name="studentClass" id="studentclass">
+                                        <option value="CRECHE">CRECHE</option>
+                                        <option value="NURSERY">NURSERY</option>
+                                        <option value="KINDERGARTEN">KINDERGARTEN</option>
+                                        <option value="PRIMARY">PRIMARY</option>
+                                        <option value="AFTER-SCHOOL CARE">AFTER-SCHOOL CARE</option>
+                                    </select>
+                                </li>
                             </ul>
                             <div class="btn-50 hv-border text-center">
                                 <button class="btn bg-clf0c41b">
@@ -568,28 +580,33 @@
     <!-- upcoming events -->
     <section>
         <div class="row upcoming-events-div">
-            <p class="event-div-title">Upcoming Events</p>
+            <p class="event-div-title">Upcoming Event</p>
                 <!-- insert carousel here -->
             <div class="event-div-inner">
                 <div class="event-image-div col-lg-6">
                     <img src="./image/excursion-4.jpg" alt="">
                 </div>
                 <div class="event-description col-lg-6">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum commodi nobis sequi nihil, 
-                        temporibus vero, ullam officia numquam consequatur, quaerat dignissimos voluptatum 
-                        laborum quam! Vitae magnam explicabo eaque magni quae.
+                    <p>This is optional and targeted to support parents that have engagements during the holiday period. Holiday school creates room for the development of the child’s learning, thinking and creativity skills. It keeps the child a step ahead of the world. This is a tour to Cape Coast
+						 <a style="color:yellow;" href="special-event" class="btn-become">
+                            See All Upcoming Events
+                        </a>
                     </p>
                 </div>
+				   <div class="flat-button">
+                       
+                    </div>
             </div>
         </div>
     </section>
+	
 
     <section class="flat-introduce flat-introduce-style5 clearfix">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
                     <div class="videobox">
-                        <a class="fancybox" data-type="iframe" href="https://www.youtube.com/embed/2Ge1GGitzLw?autoplay=1"></a>
+                        <a class="fancybox" data-type="iframe" href="#"></a>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -657,7 +674,7 @@
             </div>
             <div class="clear-padding"></div>
             <div class="nav-sing">
-                <a class="sing-in apply-btn" href="#">see more</a>
+                <a class="sing-in apply-btn" href="gallery">see more</a>
             </div>
         </div>
     </section><!-- flat-hobby -->
@@ -698,7 +715,7 @@
     </section><!-- testimonial -->
 
     <div class="parents-forum-btn">
-        <a href="parents-forum.html"><button>Visit parents forum</button></a>
+        <a href="forum.php"><button>Visit parents forum</button></a>
     </div>
 
     <footer id="footer" class="footer-type1">

@@ -1430,9 +1430,35 @@ input::-webkit-input-placeholder {
 /*blog*/
 .bg-header{
     background-image: url('../image/qw.png');
-    height: 579px;
+    height: 500px;
     background-repeat: no-repeat;
 	
+}
+.bg-header1{
+    background-image: url('../image/bg1.jpg');
+    height: 320px;
+    background-repeat: no-repeat;
+	
+}
+.bg-header2{
+    background-image: url('../image/bg11.jpg');
+    height: 400px;
+    background-repeat: no-repeat;
+	
+}
+.bg-header3{
+    background-image: url('../image/apply.jpg');
+    height: 400px;
+    background-repeat: no-repeat;
+	
+}
+.bg-header4{
+    background-image: url('../image/forum.jfif');
+    height: 400px;
+    background-repeat: no-repeat;
+	background-position: center;
+    background-size: cover;
+    width: 100% !important;
 }
 
 #login-body{
@@ -1447,7 +1473,7 @@ input::-webkit-input-placeholder {
 }
 
 .special-event-header{
-    background-image: url('../image/excursion-2.jpg');
+    background-image: url('../image/kid.jpg');
     background-position: center;
     background-size: cover;
     width: 100% !important;
