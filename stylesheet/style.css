@@ -1435,6 +1435,17 @@ input::-webkit-input-placeholder {
 	
 }
 
+#login-body{
+    background-image: url('../image/parents-forum.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.login-footer{
+    bottom: 0;
+}
+
 .special-event-header{
     background-image: url('../image/excursion-2.jpg');
     background-position: center;
@@ -1442,6 +1453,11 @@ input::-webkit-input-placeholder {
     width: 100% !important;
     height: 500px;
     margin-bottom: 4%;
+}
+
+.login-header{
+    height:150px;
+
 }
 
 .logo-head{
@@ -1553,6 +1569,116 @@ input::-webkit-input-placeholder {
     border: 1px solid black;
 }
 
+.wrapper{
+    /* background-color: rgb(228,132,0); */
+    background: #ffb347;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #ffcc33, #ffb347);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #ffcc33, #ffb347); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */        
+    border-radius: 10px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    max-width: 25%;
+    margin: 0 auto;
+    height: 95%;
+}
+
+.top-title p{
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-top: 0;
+    padding: 10% 10% 0 10%;
+    text-align: center;
+    color: black;
+}
+
+.form-wrapper p{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0 0 10% 0;
+}
+
+.form-div form input{
+    padding: 12px 10px;
+    border: none;
+    font-size: 18px;
+    background-color: transparent;
+    border-bottom: 1px solid grey;
+}
+
+.signup-div input{
+    margin: 0 0 5% 0;
+}
+
+.signup-div input:nth-child(1){
+    margin-top: 15%;
+}
+
+#loginid{
+    margin: 15% 0 10% 0;
+}
+    
+
+.form-div form input::placeholder{
+    color: white;
+}
+
+.form-div form input:focus{
+    outline: none;
+}
+
+.form-div form button{
+    border: 1px solid transparent;
+    color: rgb(228,132,0);
+    background-color: white;
+    border-radius: 20px;
+    padding: 10px 40px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.75s ease-in-out;
+    margin: 10% 0 15% 0%;
+}
+
+.form-div form button:hover,.btn-div button:hover{
+    background-color: transparent;
+    border: 1px solid black;
+    color: rgb(196, 185, 185);
+}
+
+.form-div p{
+    font-size:18px;
+    padding: 0;
+    margin: 0;
+    color: red;
+    font-weight: 700;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman'
+}
+
+.submit-btn-div{
+    text-align: center;
+}
+
+.login-wrap{
+    border: 1px solid red
+}
+
+.login-footer{
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    width: 100%;
+}
+
+.login-footer p{
+    padding: 0 0 1% 0;
+}
 
 
 .gallery-content{
