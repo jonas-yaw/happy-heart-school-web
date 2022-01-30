@@ -45,6 +45,7 @@
                                 <li><a href="special-event.html">Special Event</a></li>
                                 <li><a href="gallery.html">Gallery</a></li>
                                 <li><a href="about.html">About</a></li>
+                                <li><a href="contact.html">Apply</a></li>
                                 <li class="nav-sing">
                                     <a class="sing-in" href="contact.html">Apply</a>
                                 </li>

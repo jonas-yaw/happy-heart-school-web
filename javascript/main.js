@@ -404,7 +404,7 @@
             }
         });
 
-        $('.mobile-button').on('click', function() {         
+        $('.').on('click', function() {         
             $('#mainnav-mobi').slideToggle(300);
             $(this).toggleClass('active');
         });
