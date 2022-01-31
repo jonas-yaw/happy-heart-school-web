@@ -1,10 +1,10 @@
 <?php
 
 //defining variable
-$servername = "127.0.0.1:3306";
-$username = "u586257779_hhschooldb";
-$password = "Happyheartschool2022";
-$dbname = "u586257779_hhschooldb";
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "hhschooldb";
 
 
 // Create connection

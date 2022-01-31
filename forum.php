@@ -108,11 +108,12 @@
                                                 <textarea name="comment" id="comment-message" rows="3" placeholder="Type here Message"></textarea>
                                             </div>
                                             <div class="mg-top30">
-                                                <button class="btn btn-post-comment box-shadow-type1">
+                                                <button onclick="addds()" class="btn btn-post-comment box-shadow-type1">
                                                     Post Comment
                                                 </button>
+												
                                             </div>
-                                        </form>
+                                        </form> <button name="itemadd" type="button" id="itemadd" onclick="add()" class="btn btn-success col-md-12 col-sm-12 col-xs-12"> +</button>
                                     </div>
                                 </div>
                             </div>
@@ -137,13 +138,10 @@
                             </h4>
                             <div class="news-block">
                                 <div class="w-content news-block-content news-block-content-cus">
-                                    <ul>
+                                    <ul id="dynamic_field">
                               <li><p>Hello This is the first message</p></li>
 							<li><p>Hello This is the first message</p></li>
-							<li><p>Hello This is the first message</p></li>
-							<li><p>Hello This is the first message</p></li>
-									<li><p>Hello This is the first message</p></li><li><p>Hello This is the first message</p></li><li><p>Hello This is the first message</p></li><li><p>Hello This is the first message</p></li><li><p>Hello This is the first message</p></li><li><p>Hello This is the first message</p></li><li><p>Hello This is the first message</p></li><li><p>Hello This is the first message</p></li><li><p>Hello This is the first message</p></li><li><p>Hello This is the first message</p></li><li><p>Hello This is the first message</p></li><li><p>Hello This is the first message</p></li><li><p>Hello This is the first message</p></li>	
-                                        <li><p>Hello This is the first message</p></li><li><p>Hello This is the first message</p></li><li><p>Hello This is the first message</p></li><li><p>Hello This is the first message</p></li>	
+						
                                     </ul>
                                 </div>
 								
@@ -219,6 +217,47 @@
         </div>
         <a id="scroll-top" class="show"></a>
     </footer><!-- footer -->
+	
+	
+		
+<script type="text/javascript">
+
+			function add(){$('#dynamic_field').append('<li><p>Hello This is the first message</p></li>');		
+					}
+					
+			</script>		
+					
+					<script type="text/javascript">
+	let all = [];	
+					
+var i=0;					
+
+function addds(){
+	$.ajax({
+		type:"GET",
+		url:"pushmsg.php",
+		
+		success: function(data){
+			i++;
+	
+			
+	$('#dynamic_field').append('<li><p>Hello This is the first message</p></li>');
+		
+	all.push(i);
+		
+	
+		},
+		
+	
+	error: function(data)
+		{
+			console.log("hi");
+		}
+	});
+
+}
+</script>
+	
     
     <script src="javascript/jquery.min.js"></script>
     <script src="javascript/rev-slider.js"></script>
