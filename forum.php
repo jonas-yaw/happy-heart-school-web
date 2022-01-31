@@ -144,9 +144,18 @@
                             <div class="news-block">
                                 <div class="w-content news-block-content news-block-content-cus">
                                     <ul id="dynamic_field">
-                          
+						<?php 
+						$fetchID="SELECT * FROM forum";
+	$sddd=mysqli_query($conn,$fetchID);
+	while($noi=mysqli_fetch_assoc($sddd))
+	{
+		
+		echo' <li><p>'.$noi['message'].'</p><a id="firstname" style="color:blue;font-size:10px">'.$noi['sender'].'</a> <a id="dated" style="color:blue;font-size:10px">'.$noi['dated'].'</a><i style="color:green" class="fa fa-check" aria-hidden="true"></i></li>';
+	}
+	
+                         
 							
-						
+						?>
                                     </ul>
                                 </div>
 								
