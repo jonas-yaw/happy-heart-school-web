@@ -1,3 +1,7 @@
+<?php require_once("includes/db.php"); ?>
+<?php //require_once("includes/session.php"); 
+//$username=$_SESSION['username'] ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,9 +29,10 @@
     <link href="icon/favicon.ico" rel="shortcut icon">
 </head>
 <body>
+<!--
     <div id="loading-overlay">
         <div class="loader"></div>
-    </div>
+    </div> -->
     <div class="bg-header4">
        
    <div class="wrap-header">
@@ -103,19 +108,18 @@
                                     <div id="respond" class="comment-respond">
                                         <h3 id="reply-title" class="comment-reply-title mg-bottom24">
                                             Post A Comment
-                                        </h3>
-                                        <form action="#" method="post" class="comments">
+                                        </h3><a id="success" style="visibility:hidden">Comment has been sent</a><a id="error" style="visibility:hidden">Check your internet connectivity</a>
+                                        <form class="comments">
                                             <div class="message-wrap">
                                                 <textarea name="comment" id="comment-message" rows="3" placeholder="Type here Message"></textarea>
                                             </div>
                                             <div class="mg-top30">
-                                                <button onclick="addds()" class="btn btn-post-comment box-shadow-type1">
+                                                <button type="button" onclick="addds()" class="btn btn-post-comment box-shadow-type1">
                                                     Post Comment
                                                 </button>
 												
                                             </div>
-                                        </form> <button name="itemadd" type="button" id="itemadd" onclick="add()" class="btn btn-success col-md-12 col-sm-12 col-xs-12"> +</button>
-                                    </div>
+                                        </form>                                     </div>
                                 </div>
                             </div>
                         </article>
@@ -136,12 +140,12 @@
                         </div>
                        <h4 class="widget-title">
                                 <span>Forum</span>
-                            </h4>
+                            </h4><br>
                             <div class="news-block">
                                 <div class="w-content news-block-content news-block-content-cus">
                                     <ul id="dynamic_field">
-                              <li><p>Hello This is the first message</p></li>
-							<li><p>Hello This is the first message</p></li>
+                          
+							
 						
                                     </ul>
                                 </div>
@@ -219,42 +223,47 @@
         <a id="scroll-top" class="show"></a>
     </footer><!-- footer -->
 	
-	
 		
-<script type="text/javascript">
-
-			function add(){$('#dynamic_field').append('<li><p>Hello This is the first message</p></li>');		
-					}
-					
-			</script>		
 					
 					<script type="text/javascript">
-	let all = [];	
-					
-var i=0;					
-
+					let now=new Date();
+					 function removemulti()
+	  {
+	   //   $('#manm').remove();
+	      document.getElementById("manm").remove();
+	  }
+	let all = [];					
+	var i =0;
 function addds(){
+	var val=$('#comment-message').val();
+	
+	$('#dynamic_field').append('<li id="manm"><p id="msg'+i+'">'+val+'</p><a id="firstname'+i+'" style="color:blue;font-size:10px">FirstName.</a> <a id="dated'+i+'" style="color:blue;font-size:10px"> </a><i id="clock'+i+'" style="color:pink" class="fa fa-clock-o" aria-hidden="true"></i></li>');	
+	
 	$.ajax({
 		type:"GET",
-		url:"pushmsg.php",
+		url:"pushmsg.php?msg="+val,
 		
-		success: function(data){
-			i++;
+		success: function(data){	
+		
+	document.getElementById("manm").remove();
 	
-			
-	$('#dynamic_field').append('<li><p>Hello This is the first message</p></li>');
-		
-	all.push(i);
-		
-	
+	var result=$.parseJSON(data);
+	$('#dynamic_field').append('<li><p id="msg'+i+'">'+val+'</p><a id="firstname'+i+'" style="color:blue;font-size:10px">'+result.sender+'</a> <a id="dated'+i+'" style="color:blue;font-size:10px">'+result.dated+'</a><i style="color:green" class="fa fa-check" aria-hidden="true"></i></li>');	
+	$("#success").show();
+		$("#check").show();
+		all.push(i);
+	//	i++;
 		},
 		
 	
 	error: function(data)
 		{
 			console.log("hi");
+			$("#error").show();
+		
 		}
 	});
+	
 
 }
 </script>
