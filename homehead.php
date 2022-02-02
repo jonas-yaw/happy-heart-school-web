@@ -158,7 +158,7 @@
                         data-splitout="none" 
                         data-responsive_offset="on" 
                         data-paddingtop= "['50','50','50','50']"
-                        data-paddingbottom= "['50','50','50','50']"> <a href="#" class="btn btn-styl1">Read More</a> </div>
+                        data-paddingbottom= "['50','50','50','50']"> <a href="about.html" class="btn btn-styl1">Read More</a> </div>
                     </li>
 
                     <!-- Slide 3 -->

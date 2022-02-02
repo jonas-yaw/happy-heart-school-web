@@ -1,4 +1,5 @@
 function validateForm() {
+    console.log('hi')
     var Name = document.forms["admission-form"]["Name"].value;
     var Email = document.forms["admission-form"]["Email"].value;
     var Phone = document.forms["admission-form"]["Phone"].value;

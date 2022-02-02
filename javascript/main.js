@@ -21,6 +21,18 @@
 ;(function($) {
     "use strict";
 
+    var owl_one = $('.owl-one');
+    owl_one.owlCarousel({
+    items:3, 
+    // items change number for slider display on desktop
+  
+    loop:true,
+    margin:10,
+    autoplay:true,
+    autoplayTimeout:3000,
+    autoplayHoverPause:true
+    });
+
     var flatOwl = function() {
         $(window).on('load resize', function() {
             if ( $().owlCarousel ) {
@@ -517,6 +529,8 @@
             }); 
         });
     };
+
+    
     
 // Dom Ready
     $(function() {
