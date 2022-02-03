@@ -1,6 +1,19 @@
 <?php require_once("includes/db.php"); ?>
 <?php //require_once("includes/session.php"); 
-//$username=$_SESSION['username'] ?>
+session_start();
+
+function logged_in() {
+		return isset($_SESSION['username']);
+}
+		function confirm_logged_in() {
+		if (!logged_in()) {
+			echo "<script type='text/javascript'> document.location = 'login.php'; </script>";
+		}
+	}
+	
+confirm_logged_in();
+$username=$_SESSION['username'];
+ ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -73,6 +86,7 @@
                                 <div class="title">
                                     Forum
                                 </div>
+								<li><a href="logout.php">Log Out</a></li>
                             </div>
                         </div>
                     </div>
@@ -158,6 +172,7 @@
 						?>
                                     </ul>
                                 </div>
+								<input name="username" id="username" style="visibility:hidden" value="<?php echo"$username";?>"/> 
 								
                             </div>
                         </div>
@@ -245,12 +260,12 @@
 	var i =0;
 function addds(){
 	var val=$('#comment-message').val();
-	
+	var username=$('#username').val();
 	$('#dynamic_field').append('<li id="manm"><p id="msg'+i+'">'+val+'</p><a id="firstname'+i+'" style="color:blue;font-size:10px">FirstName.</a> <a id="dated'+i+'" style="color:blue;font-size:10px"> </a><i id="clock'+i+'" style="color:pink" class="fa fa-clock-o" aria-hidden="true"></i></li>');	
 	
 	$.ajax({
 		type:"GET",
-		url:"pushmsg.php?msg="+val,
+		url:"pushmsg.php?msg="+val+'&username='+username,
 		
 		success: function(data){	
 		

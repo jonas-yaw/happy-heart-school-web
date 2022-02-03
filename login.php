@@ -84,7 +84,7 @@ if(!empty($loginID )){
     $row = mysqli_fetch_assoc($result);
     if($row['loginID'] == $loginID){
         $_SESSION['userlogins'] = $row;
-		$_SESSION['username'] = $row['firstname'];
+		$_SESSION['username'] = $row['loginID'];
         header("location:forum.php");
     }
     else{
