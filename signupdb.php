@@ -25,9 +25,7 @@
     <link href="image/hhs-logo-resized.png" rel="shortcut icon">
 </head>
 <body id="login-body">
-    <div id="loading-overlay">
-        <div class="loader"></div>
-    </div>
+  
     <div class="login-header">
         <div class="flat-header-blog">
             <header class="header flat-header lh-header header-style5 clearfix">
@@ -60,8 +58,8 @@
     <div>
       <?php
 
-      require 'vendor/autoload.php';
-      use PHPMailer\PHPMailer\PHPMailer;
+    //  require 'vendor/autoload.php';
+    //  use PHPMailer\PHPMailer\PHPMailer;
       require_once("hubtel/Demo.php");
 
       include_once 'includes/db.php';
@@ -116,7 +114,7 @@
 
 
       $conn->close();
-
+/*
       ini_set( 'display_errors', 1 );
         error_reporting(E_ALL);
         $mail = new PHPMailer;
@@ -138,7 +136,7 @@
         } else {
         //    echo 'The email message was sent.';
         }
-
+*/
 
         /* sms */
         try {

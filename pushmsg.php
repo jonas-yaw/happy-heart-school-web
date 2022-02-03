@@ -5,7 +5,7 @@
 <?php
 $val=$_GET['msg'];
 
-$sender="fe";
+$sender=$_GET['username'];
 $timed=date("H:i:s");
 $dated=date("Y-m-d");
 
