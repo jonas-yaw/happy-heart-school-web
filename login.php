@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -60,14 +63,51 @@
     <div class="wrapper">
         <div class="top-title">
             <p>Happy Heart School Parents Forum</p>
-        </div>
+        </div><br>
+		
+		<div style=" display: flex; justify-content: center; align-items: center;"> <span id="invalid"  style="color:white; visibility:hidden"> Ooops!!Wrong LoginID. Contact School Administrator  </span> </div>
+<?php
+session_start();
+
+
+if(isset($_POST['login']))
+{
+$loginID = $_POST["loginid"];
+include_once 'includes/db.php';
+
+
+if(!empty($loginID )){
+    $sql = "SELECT * from parentsTable
+    where loginID='$loginID'";
+
+    $result = mysqli_query($conn, $sql);
+    $row = mysqli_fetch_assoc($result);
+    if($row['loginID'] == $loginID){
+        $_SESSION['userlogins'] = $row;
+		$_SESSION['username'] = $row['firstname'];
+        header("location:forum.php");
+    }
+    else{
+            echo '<script type="text/javascript">  
+		
+		document.getElementById("invalid").style.visibility = "visible";
+		
+		 </script>';
+
+    }
+
+}
+
+$conn->close();
+}
+?>
 
         <div class="form-wrapper">
             <div class="form-div">
-                <form method="POST" action="logindb.php">
+                <form method="post" >
                     <input type="text" required="required" name="loginid" id="loginid" placeholder="Login ID">
                     <div class="submit-btn-div">
-                        <button type="submit">Sign in</button>
+                        <button name="login">Sign in</button>
                     </div>
                 </form>
             </div>

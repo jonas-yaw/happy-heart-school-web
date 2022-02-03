@@ -12,7 +12,7 @@
 	
 	function confirm_logged_in() {
 		if (!logged_in()) {
-			redirect_to2("login.php");
+			redirect_to2("login.html");
 		}
 	}
 	
