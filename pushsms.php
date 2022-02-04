@@ -1,7 +1,7 @@
 <?php
 require_once("hubtel/Demo.php");
 try {
-				$messageResponse = $messagingApi->sendQuickMessage("Mo-Crane", "0541778545", "Hello, This is a test");
+				$messageResponse = $messagingApi->sendQuickMessage("HHS", "0541778545", "Hello, This is a test");
 
 				if ($messageResponse instanceof MessageResponse) {
 					

@@ -1740,16 +1740,68 @@ input::-webkit-input-placeholder {
     font-size: 18px;
 }
 
+.about-staff{
+    margin-top: 8%;
+}
+
+
 /* carousel */
 .sp-section{
     margin-bottom: 10%;
+    height: auto;
+    overflow: auto;
+}
+
+.sp-section h3{
+    font-size: 40px;
+    padding: 2%;
+    text-align: center;
+    color: #fbb545;
+    font-weight: bold;
+}
+
+.sp-section::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+.sp-section::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+}
+
+.sp-section::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #D62929;
 }
 
 .sp-cloned {
-    width: 400px; 
+    width: 300px; 
     margin-right: 10px;  
-    border: 1px solid red;
     border-radius: 10px;
+    background-color: white;
+    margin-bottom: 10px;
+    height: 100px;
+    box-shadow: 5px 10px 8px #888888
+}
+
+.sp-cloned div{
+    padding: 2%;
+}
+
+.upcoming-events-outer{
+    display: flex;
+    flex-flow: row wrap;
+    flex: none;
+    justify-content: center;
+    align-items: center;
+    padding: 3%;
+    overflow: hidden;
 }
 
 .sp-cloned p{
