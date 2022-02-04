@@ -17,9 +17,7 @@ if(!empty($loginID )){
         header("location:forum.php");
     }
     else{
-        echo '<div class="inns">
-          <p>Failed to login. Either password or email was entered incorrectly.</p>
-        </div>';
+        echo '<script>alert("Wrong LoginID. Contact School Administrator") </script>';
     }
 
 }
