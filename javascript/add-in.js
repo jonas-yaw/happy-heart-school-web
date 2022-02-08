@@ -37,3 +37,33 @@ function validateEnquiryForm() {
     }
 
 }
+
+
+var alls = document.querySelectorAll('.item');
+
+var general = document.querySelectorAll('.general');
+
+function hide_init(){
+for (var i = 0; i < alls.length; ++i) { 
+    alls[i].style.display = 'none'; 
+ }
+}
+ 
+function show_general(){  
+ //call the inital hide function
+ hide_init();
+ //loop through red-tagged items and show them  
+for (var i = 0; i < general.length; ++i) { 
+    general[i].style.display = 'inline-block'; 
+ } 
+ console.log('hi')
+}
+ 
+ function show_all(){  
+    //loop through all items and show them
+     for (var i = 0; i < alls.length; ++i) { 
+   alls[i].style.display = 'inline-block'; 
+  } 
+}
+
+ 
