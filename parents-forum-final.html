@@ -34,26 +34,26 @@
    <div class="wrap-header">
         <header class="header flat-header lh-header header-style5 clearfix">
             <div class="site-header-inner">
-                <div class="container">
+                    <div class="container">
                         <div id="logo" class="logo">
                             <h4>HAPPY HEART</h4>
-                        </div>                    <div class="mobile-button"><span></span></div>
-                    <div class="header-menu">
-                        <nav id="main-nav" class="main-nav">
-                            <ul class="menu">
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="classes.html">Our classes</a></li>
-                                <li><a href="special-event.html">Special Event</a></li>
-                                <li><a href="gallery.html">Gallery</a></li>
-                                <li><a href="about.html">About</a></li>
-                                <li><a href="contact.html">Apply</a></li>
-                                <li class="nav-sing">
+                        </div>                        <div class="mobile-button"><span></span></div>
+                        <div class="header-menu">
+                            <nav id="main-nav" class="main-nav">
+                                <ul class="menu">
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="classes.html">Our classes</a></li>
+                                    <li><a href="special-event.html">Special Event</a></li>
+                                    <li><a href="gallery.html">Gallery</a></li>
+                                    <li><a href="about.html">About</a></li>
+                                    <li><a href="contact.html" class="nav-sing-disp">Apply</a></li>
+                                    <li class="nav-sing">
                                     <a class="sing-in" href="contact.html">Apply</a>
                                 </li>
-                            </ul>
-                        </nav>
-                    </div> 
-                </div>
+                                </ul>
+                            </nav>
+                        </div> 
+                    </div>
             </div>
         </header><!-- header -->
     </div><!-- wrap-header -->
@@ -90,20 +90,24 @@
                                     <li><i class="fa fa-instagram" aria-hidden="true"></i></li>
                                     <li><i class="fa fa-google-plus" aria-hidden="true"></i></li>
                                 </ul>
+
+                                
                                 <div class="content-blog-single-inner">
-                                    <div class="content-blog-single-wrap">
-                                        <h1 class="title pd-title-single">
-                                            <a href="#">How can my kid do better?</a>
-                                        </h1>
-                                        <p>
-                                            If it was not for beautiful designs, we’d all live in a drab world. 
-                                            Steve Jobs would have been anonymous, and nobody would buy Apple products. 
-                                            The best designers, people like Janoff, who designed the Apple logo in 2 weeks.
-                                        </p>
-                                       
+                                    <div class="forum-item academic">
+                                        <div class="content-blog-single-wrap">
+                                            <h1 class="title pd-title-single">
+                                                <a href="#">How can my kid do better?</a>
+                                            </h1>
+                                            <p>
+                                                If it was not for beautiful designs, we’d all live in a drab world. 
+                                                Steve Jobs would have been anonymous, and nobody would buy Apple products. 
+                                                The best designers, people like Janoff, who designed the Apple logo in 2 weeks.
+                                            </p>
+                                        
+                                        </div>
                                     </div>
 
-                                    <div class="forum-item General">
+                                    <div class="forum-item suggestions">
                                         <div class="content-blog-single-wrap">
                                             <h1 class="title pd-title-single">
                                                 <a href="#">Town meeting</a>
@@ -118,21 +122,7 @@
                                         </div>
                                     </div>
 								
-                                    <div id="respond" class="comment-respond">
-                                        <h3 id="reply-title" class="comment-reply-title mg-bottom24">
-                                            Post A Comment
-                                        </h3><a id="success" style="visibility:hidden">Comment has been sent</a><a id="error" style="visibility:hidden">Check your internet connectivity</a>
-                                        <form class="comments">
-                                            <div class="message-wrap">
-                                                <textarea name="comment" id="comment-message" rows="3" placeholder="Type here Message"></textarea>
-                                            </div>
-                                            <div class="mg-top30">
-                                                <button type="button" onclick="addds()" class="btn btn-post-comment box-shadow-type1">
-                                                    Post Comment
-                                                </button>
-												
-                                            </div>
-                                        </form>                                     </div>
+                                    
                                 </div>
                             </div>
                         </article>
@@ -145,9 +135,9 @@
                                 <span>Topics</span>
                             </h4>
                             <ul class="categories-wrap">
-                                <li><a href="#" id="show_general" onclick="show_general()">General</a></li>
-                                <li><a href="#">Academic</a></li>
-                                <li><a href="#">Suggestions</a></li>
+                                <li><a href="#" id="show_all" onclick="show_all()">General</a></li>
+                                <li><a href="#" id="show_academic" onclick="show_academic()">Academic</a></li>
+                                <li><a href="#" id="show_suggestions" onclick="show_suggestions()">Suggestions</a></li>
                                
                             </ul>
                         </div>
@@ -223,52 +213,6 @@
         <a id="scroll-top" class="show"></a>
     </footer><!-- footer -->
 	
-		
-					
-					<script type="text/javascript">
-					let now=new Date();
-					 function removemulti()
-	  {
-	   //   $('#manm').remove();
-	      document.getElementById("manm").remove();
-	  }
-	let all = [];					
-	var i =0;
-function addds(){
-	var val=$('#comment-message').val();
-	var username=$('#username').val();
-	$('#dynamic_field').append('<li id="manm"><p id="msg'+i+'">'+val+'</p><a id="firstname'+i+'" style="color:blue;font-size:10px">FirstName.</a> <a id="dated'+i+'" style="color:blue;font-size:10px"> </a><i id="clock'+i+'" style="color:pink" class="fa fa-clock-o" aria-hidden="true"></i></li>');	
-	
-	$.ajax({
-		type:"GET",
-		url:"pushmsg.php?msg="+val+'&username='+username,
-		
-		success: function(data){	
-		
-	document.getElementById("manm").remove();
-	
-	var result=$.parseJSON(data);
-	$('#dynamic_field').append('<li><p id="msg'+i+'">'+val+'</p><a id="firstname'+i+'" style="color:blue;font-size:10px">'+result.sender+'</a> <a id="dated'+i+'" style="color:blue;font-size:10px">'+result.dated+'</a><i style="color:green" class="fa fa-check" aria-hidden="true"></i></li>');	
-	$("#success").show();
-		$("#check").show();
-		all.push(i);
-	//	i++;
-		},
-		
-	
-	error: function(data)
-		{
-			console.log("hi");
-			$("#error").show();
-		
-		}
-	});
-	
-
-}
-</script>
-	
-    
     <script src="javascript/jquery.min.js"></script>
     <script src="javascript/rev-slider.js"></script>
     <script src="javascript/plugins.js"></script>

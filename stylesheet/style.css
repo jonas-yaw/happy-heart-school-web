@@ -662,6 +662,10 @@ input::-webkit-input-placeholder {
     transform:rotate3d(0,0,1,-45deg);
 }
 
+.nav-sing-disp{
+    display: none;
+}
+
 .btn-submenu {
     position: absolute;
     right: 0;

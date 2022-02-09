@@ -3,8 +3,6 @@ function validateForm() {
     var Name = document.forms["admission-form"]["Name"].value;
     var Email = document.forms["admission-form"]["Email"].value;
     var Phone = document.forms["admission-form"]["Phone"].value;
-    var enq_email = document.forms["enquiry-form"]["enq-Email"].value;
-    var enquiry = document.forms["enquiry-form"]["enquiry"].value;
 
     if (Name == "") {
         alert("Name must be filled out");
@@ -39,9 +37,10 @@ function validateEnquiryForm() {
 }
 
 
-var alls = document.querySelectorAll('.item');
+var alls = document.querySelectorAll('.forum-item');
 
-var general = document.querySelectorAll('.general');
+var suggestions = document.querySelectorAll('.suggestions');
+var academic = document.querySelectorAll('.academic');
 
 function hide_init(){
 for (var i = 0; i < alls.length; ++i) { 
@@ -49,15 +48,24 @@ for (var i = 0; i < alls.length; ++i) {
  }
 }
  
-function show_general(){  
+function show_suggestions(){  
  //call the inital hide function
  hide_init();
  //loop through red-tagged items and show them  
-for (var i = 0; i < general.length; ++i) { 
-    general[i].style.display = 'inline-block'; 
+for (var i = 0; i < suggestions.length; ++i) { 
+    suggestions[i].style.display = 'inline-block'; 
  } 
- console.log('hi')
 }
+
+function show_academic(){  
+    //call the inital hide function
+    hide_init();
+    //loop through red-tagged items and show them  
+    for (var i = 0; i < academic.length; ++i) { 
+        academic[i].style.display = 'inline-block'; 
+    } 
+}
+   
  
  function show_all(){  
     //loop through all items and show them

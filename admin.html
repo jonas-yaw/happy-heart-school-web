@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Heart School</title>
+</head>
+<body>
+    <!-- add new topic and comments -->
+    <div class="topic-div">
+        Add new topic
+        <form class="topics"
+            method='POST' 
+            name = 'topic-form'
+            onsubmit="return validateForm()"
+        >
+            <div class="message-wrap">
+                <input type="text" name="topic-title" id="topic-title">
+                <textarea name="comment" id="comment-message" rows="3" placeholder="Type topic description here"></textarea>
+            </div>
+            <div class="mg-top30">
+                <button type="submit" class="btn btn-post-comment box-shadow-type1">
+                    Post Comment
+                </button>
+                
+            </div>
+        </form>                                     
+    </div>      
+</body>
+</html>
+
