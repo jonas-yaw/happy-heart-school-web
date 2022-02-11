@@ -663,7 +663,7 @@ input::-webkit-input-placeholder {
 }
 
 .nav-sing-disp{
-    display: none;
+    visibility: hidden;
 }
 
 .btn-submenu {

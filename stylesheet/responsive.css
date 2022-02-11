@@ -348,6 +348,7 @@
     }
 
     .nav-sing-disp{
+      visibility: visible;
       display: inline;
     }
     

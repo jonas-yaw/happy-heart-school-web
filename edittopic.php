@@ -45,7 +45,7 @@
     if (isset($_GET['edit'])) {
     $topicID = $_GET['edit'] ;
     
-    $sql = "SELECT * from goodstable
+    $sql = "SELECT * from forum
     where topicID='$topicID';";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt,$sql)) {
