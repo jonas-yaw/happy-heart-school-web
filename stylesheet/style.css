@@ -1815,6 +1815,7 @@ input::-webkit-input-placeholder {
 .admin-profile{
     display: flex;
     flex-flow: row wrap;
+    justify-content: center;
 }
 
 /* forum admin styles */
@@ -1965,6 +1966,24 @@ input::-webkit-input-placeholder {
     background-position: center center;
     background-repeat: no-repeat;
 }
+
+.img-sidebar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    text-align: center;
+}
+
+.portfolio-sidebar{
+    width: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 70%;
+}
+
 
 
 .widget-sent .form-sent button{
