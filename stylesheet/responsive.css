@@ -584,6 +584,31 @@
       display: inline-block;
       text-align: center;
     }
+
+        
+    .sp-section h3{
+      font-size: 30px;
+      font-weight: 700;
+    }
+
+    .see-more-btn{
+      margin-top: 25%;
+    }
+
+    .img-sidebar{
+      width: 100%;
+    }
+
+    .portfolio-sidebar{
+      width: 100%;
+    }
+
+
+    
+    .submit-btn,.edit-btn,.forum-delete-btn{
+      font-weight: 500;
+    }
+
     .campus {
       margin-top: -80px;
       padding-bottom: 100px;

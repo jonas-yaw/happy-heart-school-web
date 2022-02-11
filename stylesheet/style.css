@@ -1834,11 +1834,15 @@ input::-webkit-input-placeholder {
     overflow: auto;
 }
 
-.admin-top-section{
+.admin-top-section,.admin-top-section p a{
     margin-top: 5%;
     margin-bottom: 3%;
     font-size: 30px;
     font-weight: bold;
+}
+
+.admin-top-section p a{
+    color: #39468f;
 }
 
 .topic-div{

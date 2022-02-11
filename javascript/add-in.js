@@ -1,5 +1,4 @@
 function validateForm() {
-    console.log('hi')
     var Name = document.forms["admission-form"]["Name"].value;
     var Email = document.forms["admission-form"]["Email"].value;
     var Phone = document.forms["admission-form"]["Phone"].value;
@@ -35,6 +34,40 @@ function validateEnquiryForm() {
     }
 
 }
+
+function validateForumForm(){
+    var title = document.forms["topic-form"]["topic-title"].value;
+    var description = document.forms["topic-form"]["description"].value;
+    
+    if (title == "") {
+        alert("Title must be filled out");
+        return false;
+    }
+
+    if (description == "") {
+        alert("Description must be filled out");
+        return false;
+    }
+
+}
+
+function validateEditForumForm(){
+    var title = document.forms["forum-edit-form"]["topic-edit"].value;
+    var description = document.forms["forum-edit-form"]["description-edit"].value;
+    
+    if (title == "") {
+        alert("Title must be filled out");
+        return false;
+    }
+
+    if (description == "") {
+        alert("Description must be filled out");
+        return false;
+    }
+
+
+}
+
 
 
 var alls = document.querySelectorAll('.forum-item');

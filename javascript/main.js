@@ -53,12 +53,12 @@
 
                     $this.find('.owl-carousel').owlCarousel({
                         margin: gap,
-                        loop:loops,
+                        loop:true,
                         dots:dots,
                         nav: nav,
                         navigation : true,
                         pagination: true,
-                        autoplay: auto,
+                        autoplay: true,
                         autoplayTimeout: 5000,
                         responsive: {
                             0:{

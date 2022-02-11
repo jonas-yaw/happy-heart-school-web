@@ -34,15 +34,16 @@
                 <p class="inner-title">Add new topic</p>
                 <form class="topics"
                     method='POST' 
+                    action = 'forumdb.php'
                     name = 'topic-form'
-                    onsubmit="return validateForm()"
+                    onsubmit="return validateForumForm()"
                 >
                     <div class="message-wrap">
                         <input type="text" name="topic-title" id="topic-title" placeholder="topic">
-                        <textarea name="comment" id="comment-message" rows="3" placeholder="Type topic description here"></textarea>
+                        <textarea name="description" id="comment-message" rows="3" placeholder="Type topic description here"></textarea>
                     </div>
                     <div class="mg-top30">
-                        <button type="submit" class="submit-btn">
+                        <button type="submit" class="submit-btn" name='new-forum'>
                             submit
                         </button>
                         
@@ -61,26 +62,52 @@
                             <th></th>
                         </tr>
 
+                    <?php
+                    include_once 'includes/db.php';
+
+                    $sql = "SELECT * FROM forum;";
+
+                    $stmt = mysqli_stmt_init($conn);
+                    if (!mysqli_stmt_prepare($stmt,$sql)) {
+                        echo "SQL statement failed";
+                    }else {
+
+                        mysqli_stmt_execute($stmt);
+                        $result = mysqli_stmt_get_result($stmt);
+
+                        while ($row = mysqli_fetch_assoc($result)) {
+                        echo ' 
                         <tr>
-                            <td>1</td>
-                            <td>How can my kid do better?</td>
+                            <td>'.$row["id"].'</td>
+                            <td>'.$row["topic"].'</td>
                             <td>
                                 <form action="edittopic.php" method="post">
-                                    <button type="submit" name="edit" value="1" class="edit-btn">edit</button>
+                                    <button type="submit" name="edit" value='.$row["id"].' class="edit-btn">edit</button>
                                 </form>
                             </td>
                             <td>
                                 <form action="delete.php" method="post">
-                                    <button type="submit" onclick="alert()" name="delete" value="1" class="forum-delete-btn">delete</button>
+                                    <button type="submit" name="delete" value='.$row["id"].' class="forum-delete-btn">delete</button>
                                 </form>
                             </td>
-                        </tr>
+                        </tr>';
+                        }
+
+
+                    }
+
+                    ?>
+                    
                     </table>
                 </div>
             </div>
 
         </div>
     </div>
+
+    <script src="javascript/main.js"></script>
+    <script src="javascript/add-in.js"></script>
+
 </body>
 </html>
 
