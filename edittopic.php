@@ -64,10 +64,11 @@
                   <textarea name="description-edit" id="description" cols="30" rows="10"></textarea>
                   <button type="submit" name="update">edit</button>
               </form>
-              '
+              ';
             }
 
         }
+        ?>
       </div>
     
     <?php
