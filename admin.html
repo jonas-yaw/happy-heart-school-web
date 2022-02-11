@@ -1,31 +1,86 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Heart School</title>
+
+    <!-- Mobile Specific Metas-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <!-- Bootstrap-->
+    <link rel="stylesheet" href="stylesheet/bootstrap.css">
+
+    <!-- Template Style-->
+    <link rel="stylesheet" href="stylesheet/font-awesome.css"> 
+    <link rel="stylesheet" href="stylesheet/animate.css">
+    <link rel="stylesheet" href="stylesheet/style.css">
+    <link rel="stylesheet" href="stylesheet/shortcodes.css">
+    <link rel="stylesheet" href="stylesheet/jquery-fancybox.css">
+    <link rel="stylesheet" href="stylesheet/responsive.css">
+    <link rel="stylesheet" href="stylesheet/flexslider.css">
+    <link rel="stylesheet" href="stylesheet/owl.theme.default.min.css">
+    <link rel="stylesheet" href="stylesheet/owl.carousel.min.css">
+    <link rel="stylesheet" href="stylesheet/jquery.mCustomScrollbar.min.css">
+
+    <link href="image/hhs-logo-resized.png" rel="shortcut icon">
 </head>
 <body>
-    <!-- add new topic and comments -->
-    <div class="topic-div">
-        Add new topic
-        <form class="topics"
-            method='POST' 
-            name = 'topic-form'
-            onsubmit="return validateForm()"
-        >
-            <div class="message-wrap">
-                <input type="text" name="topic-title" id="topic-title">
-                <textarea name="comment" id="comment-message" rows="3" placeholder="Type topic description here"></textarea>
+    <div class="admin-bg">
+        <div class="admin-wrapper">
+            <div class='admin-top-section'>
+                <p>Admin</p>
             </div>
-            <div class="mg-top30">
-                <button type="submit" class="btn btn-post-comment box-shadow-type1">
-                    Post Comment
-                </button>
-                
+            <!-- add new topic and comments -->
+            <div class="topic-div">
+                <p class="inner-title">Add new topic</p>
+                <form class="topics"
+                    method='POST' 
+                    name = 'topic-form'
+                    onsubmit="return validateForm()"
+                >
+                    <div class="message-wrap">
+                        <input type="text" name="topic-title" id="topic-title" placeholder="topic">
+                        <textarea name="comment" id="comment-message" rows="3" placeholder="Type topic description here"></textarea>
+                    </div>
+                    <div class="mg-top30">
+                        <button type="submit" class="submit-btn">
+                            submit
+                        </button>
+                        
+                    </div>
+                </form>                                     
+            </div>  
+            
+            <!-- read -->
+            <div class="all-topics">
+                <div>
+                    <table>
+                        <tr>
+                            <th>id</th>
+                            <th>topic</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+
+                        <tr>
+                            <td>1</td>
+                            <td>How can my kid do better?</td>
+                            <td>
+                                <form action="edittopic.php" method="post">
+                                    <button type="submit" name="edit" value="1" class="edit-btn">edit</button>
+                                </form>
+                            </td>
+                            <td>
+                                <form action="delete.php" method="post">
+                                    <button type="submit" onclick="alert()" name="delete" value="1" class="forum-delete-btn">delete</button>
+                                </form>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
             </div>
-        </form>                                     
-    </div>      
+
+        </div>
+    </div>
 </body>
 </html>
 

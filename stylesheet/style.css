@@ -1812,6 +1812,110 @@ input::-webkit-input-placeholder {
     padding: 8%;
 }
 
+.admin-profile{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+/* forum admin styles */
+.admin-bg{
+    background-image: url('../image/admin-bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.admin-wrapper{
+    max-width: 90%;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+.admin-top-section{
+    margin-top: 5%;
+    margin-bottom: 3%;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.topic-div{
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+.topic-div .inner-title{
+    font-size: 20px;
+}
+
+.topic-div input,.edit-form input{
+    margin-bottom: 2%;
+}
+
+.all-topics{
+    margin-top: 5%;
+}
+
+.submit-btn{
+    border: none;
+    padding: 10px 16px;
+    border-radius: 10px;
+    color: white;
+    background-color: #f0c41b;
+    font-weight: bold;
+}
+
+.all-topics table{
+    border-collapse: collapse;
+    backdrop-filter: blur(10px);
+    width: 100%;
+}
+
+
+.all-topics th{
+    background-color: rgb(238, 196, 56);
+    font-weight: bold;
+    text-transform: uppercase;
+    color: black;
+}
+
+.all-topics td,.all-topics th{
+    border: 1px solid #999;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.edit-btn{
+    background-color: #fb8122;
+    border: none;
+    color: white;
+    font-weight: 700;
+    padding: 6px 16px;
+}
+
+
+.forum-delete-btn{
+    background-color: red;
+    border: none;
+    color: white;
+    font-weight: 700;
+    padding: 6px 16px;
+}
+
+.edit-form input{
+ width: 40%;
+}
+
+.edit-form textarea{
+    width: 60%;
+}
+
+.edit-form form button{
+    margin-top: 2%;
+    padding: 6px 16px;
+    font-weight: 700;   
+}
 
 .owl-theme .owl-dots .owl-dot{ display:none!important;}
 
