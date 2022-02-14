@@ -346,6 +346,12 @@
     .header #mainnav-mobi ul li.nav-sing {
       display: none;
     }
+
+    .nav-sing-disp{
+      visibility: visible;
+      display: inline;
+    }
+    
     .header #mainnav-mobi {
         max-height: calc(100vh - 84px);
         overflow-y: auto;
