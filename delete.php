@@ -7,13 +7,13 @@ $topicID = $_POST['delete'] ;
 
 
 $sql = "DELETE from forum
-where topicid='$topicID';";
+where id='$topicID';";
 $stmt = mysqli_stmt_init($conn);
 if (!mysqli_stmt_prepare($stmt,$sql)) {
   echo "SQL statement failed";
 }else {
     mysqli_stmt_execute($stmt);
-    header("location:admin.html?delete= success");
+    header("location:admin.php?delete= success");
 }
 
 

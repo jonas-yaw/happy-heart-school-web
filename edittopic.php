@@ -34,7 +34,7 @@
     <div class="admin-bg">
         <div class="admin-wrapper">
             <div class='admin-top-section'>
-                <p><a href='./admin.html'>Admin</a> / Edit</p>
+                <p><a href='./admin.php'>Admin</a> / Edit</p>
             </div>
 
       <div class='edit-form'>
@@ -60,8 +60,8 @@
               method="post"
               onsubmit="return validateEditForumForm()"
               >
-                  <input type="text" name="topic-edit" id="topic" value="topic">
-                  <textarea name="description-edit" id="description" cols="30" rows="10"></textarea>
+                  <input type="text" name="topic-edit" id="topic" value='.$row["topic"].'>
+                  <textarea name="description-edit" id="description" cols="30" rows="10">'.$row["description"].'</textarea>
                   <button type="submit" name="update">edit</button>
               </form>
               ';
@@ -70,37 +70,7 @@
         }
         ?>
       </div>
-    
-    <?php
-    include_once "includes/db.php";
-    
-    
-    if (isset($_GET['edit'])) {
-    $topicID = $_GET['edit'] ;
-    
-    $sql = "SELECT * from forum
-    where topicID='$topicID';";
-    $stmt = mysqli_stmt_init($conn);
-    if (!mysqli_stmt_prepare($stmt,$sql)) {
-      echo "SQL statement failed";
-    }else {
-        mysqli_stmt_execute($stmt);
-        $result = mysqli_stmt_get_result($stmt);
-        $row = mysqli_fetch_assoc($result);
-    
-      echo '<div>
-        <form action="update.php" method="post">
-            <input type="text" name="topic" id="topic" value="topic">
-            <textarea name="description" id="description" cols="30" rows="10"></textarea>
-            <button type="submit" name="update">edit</button>
-        </form>
-      </div>';
-    
-    
-      }
-    }
-    ?>
-
+  
 
     </div>
   </div>

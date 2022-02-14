@@ -75,6 +75,13 @@
                         mysqli_stmt_execute($stmt);
                         $result = mysqli_stmt_get_result($stmt);
 
+                        $rowCount = mysqli_num_rows($result);
+                        if ($rowCount==0) {
+                        echo '<div class="empty">
+                        <p>Oops, there are no topics.</p>
+                        </div>';
+                        }else{
+
                         while ($row = mysqli_fetch_assoc($result)) {
                         echo ' 
                         <tr>
@@ -92,6 +99,7 @@
                             </td>
                         </tr>';
                         }
+                    }
 
 
                     }

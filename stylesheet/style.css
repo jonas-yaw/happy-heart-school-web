@@ -1980,6 +1980,10 @@ input::-webkit-input-placeholder {
     text-align: center;
 }
 
+.no-portfolio .img-sidebar{
+    width: 100%;
+}
+
 .portfolio-sidebar{
     width: 55%;
     display: flex;
