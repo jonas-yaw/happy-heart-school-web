@@ -33,7 +33,7 @@ ini_set( 'display_errors', 1 );
    $mail->Password = 'Mother@2016';
    $mail->setFrom('info@richardoduro.com', 'Richard Oduro');
    $mail->addReplyTo('info@richardoduro.com', 'Richard Oduro');
-   $mail->addAddress('richard.oduro45@gmail.com', 'Richard');
+   $mail->addAddress($Email, $Name);
    $mail->Subject = 'Happy Heart School Admission Form';
   // $mail->msgHTML(file_get_contents('message.html'), __DIR__);
    $mail->Body = "Hi $Name, Kindly find attached as requested.";
@@ -50,7 +50,7 @@ ini_set( 'display_errors', 1 );
    }
 
 try {
-				$messageResponse = $messagingApi->sendQuickMessage("HHS", "0541778545", "Happy Heart Admission Form has been sent to your email");
+				$messageResponse = $messagingApi->sendQuickMessage("HHS", $Phone, "Happy Heart Admission Form has been sent to your email");
 
 				if ($messageResponse instanceof MessageResponse) {
 					
